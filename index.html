@@ -300,7 +300,11 @@ button.seg2{border:0;width:100%}
 .promo-pl .mini{display:block;width:70px;flex:none;transform:rotate(-8deg)}
 .promo-pl .mini .wcard{transform:none;border-radius:7px;box-shadow:0 6px 14px -4px rgba(0,0,0,.35)}
 
-.rep{margin-top:12px;padding:14px;border-radius:18px;background:#FF6900;color:#fff}
+.gos{display:flex;align-items:center;gap:10px;width:100%;margin-top:10px;padding:12px 14px;border:0;border-radius:16px;background:#fff;text-align:left;box-shadow:inset 0 0 0 1.5px #FF6900}
+.gos .ic{width:22px;height:22px;color:#FF6900}
+.gos b{display:block;font-size:14px;font-weight:750}
+.gos small{font-size:11.5px;color:#7A7A85}
+.rep{margin-top:8px;padding:14px;border-radius:18px;background:#FF6900;color:#fff}
 .rep>b{display:block;font-size:15px;font-weight:800;line-height:1.2}
 .rep ul{margin:8px 0 12px;padding-left:16px;font-size:12px;line-height:1.35;color:#FFE3CC}
 .rep .cta{height:42px;font-size:14px}
@@ -364,6 +368,26 @@ button.seg2{border:0;width:100%}
 .js .cards-vis:not(.in) .c2{transform:translateX(30px) rotate(12deg);opacity:0}
 .cards-vis .wcard{transition:transform 1.1s var(--ease-out),opacity .8s var(--ease-out)}
 .cards-vis .c2{transition-delay:.12s}
+.idw{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.idw>div{padding:18px 20px;border-radius:24px;background:#fff;box-shadow:var(--shadow)}
+.idw .gu{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#FFF1E6;color:var(--or);margin-bottom:10px}
+.idw .gu .ic{width:22px;height:22px}
+.idw b{display:block;font-weight:750}
+.idw>div>span:last-child{display:block;margin-top:4px;font-size:.93rem;color:var(--ink-2)}
+@media (max-width:560px){.idw{grid-template-columns:1fr}}
+.ways{display:grid;grid-template-columns:1fr 1.25fr;gap:12px;margin-top:14px}
+.way{padding:20px 22px;border-radius:24px;background:#fff;box-shadow:var(--shadow)}
+.way .gu{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#FFF1E6;color:var(--or);margin-bottom:12px}
+.way .gu .ic{width:22px;height:22px}
+.way b{display:block;font-size:1.12rem;font-weight:750}
+.way p{margin-top:6px;font-size:.95rem;color:var(--ink-2)}
+.way ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.way li{display:flex;gap:10px;font-size:.92rem;line-height:1.35}
+.way li .ic{width:18px;height:18px;color:var(--or);margin-top:1px}
+.plastic-way{background:var(--ink);color:#fff}
+.plastic-way p{color:rgba(255,255,255,.72)}
+.plastic-way .gu{background:rgba(255,255,255,.1)}
+@media (max-width:680px){.ways{grid-template-columns:1fr}}
 .lim{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
 .lim div{padding:20px 22px;border-radius:24px;background:#fff;box-shadow:var(--shadow)}
 .lim small{display:block;font-size:.88rem;color:var(--ink-2)}
@@ -402,10 +426,31 @@ button.seg2{border:0;width:100%}
 @media (max-width:767px){.demo{margin:0;border-radius:0}.demo-grid{grid-template-columns:1fr;justify-items:center}.demo-grid>div:first-child{justify-self:stretch}.log{grid-column:auto;width:100%}.seg{max-width:none}}
 
 /* ============ FOR DODO ============ */
-.biz{display:block}
-.biz .gains{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,5vw,72px)}
-@media (max-width:900px){.biz .gains{grid-template-columns:1fr}}
+.biz{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
+@media (max-width:900px){.biz{grid-template-columns:1fr}.calc{position:relative!important;top:0!important}}
+.calc{position:sticky;top:24px;background:var(--ink);color:#fff;border-radius:28px;padding:clamp(24px,3vw,38px)}
+.calc h3{font-size:1.55rem;font-weight:800}
+.calc .sub{color:rgba(255,255,255,.65);font-size:.92rem;margin-top:8px}
+.ctl{margin-top:20px}
+.ctl label{display:flex;justify-content:space-between;gap:12px;font-size:.93rem;color:rgba(255,255,255,.72)}
+.ctl output{color:#fff;font-weight:700;white-space:nowrap}
+.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:6px 0 0}
+.calc input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--or) var(--p,50%),rgba(255,255,255,.2) var(--p,50%))}
+.calc input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:rgba(255,255,255,.2)}
+.calc input[type=range]::-moz-range-progress{height:4px;border-radius:2px;background:var(--or)}
+.calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;margin-top:-9px;box-shadow:0 4px 12px rgba(0,0,0,.4);transition:transform .16s var(--ease-out)}
+.calc input[type=range]::-moz-range-thumb{width:22px;height:22px;border:0;border-radius:50%;background:#fff}
+.calc input[type=range]:active::-webkit-slider-thumb{transform:scale(1.12)}
+.res{margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.res div{font-size:.88rem;color:rgba(255,255,255,.65)}
+.res b{display:block;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:850;letter-spacing:-.04em;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums}
+.res div:first-child b{color:var(--or)}
+.res .now b{font-size:1.3rem;font-weight:750;letter-spacing:-.02em;margin-top:4px}
+.formula{margin-top:18px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);font-size:.86rem;line-height:1.4}
+.calc .cnote{margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.45}
+@media (max-width:480px){.res b{font-size:1.6rem}}
 .gains{list-style:none;margin:30px 0 0;padding:0}
+.gains li:last-child{border-bottom:2px solid var(--line)}
 .gains li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-top:2px solid var(--line)}
 .gains .ic{width:28px;height:28px;color:var(--or)}
 .gains b{display:block;font-size:1.2rem;font-weight:750;letter-spacing:-.015em}
@@ -484,7 +529,7 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
       <div class="wcard" role="img" aria-label="Карта Додо Wallet, баланс 2 350 рублей">
         <div class="wc-top"><i class="mk"></i><b>додо wallet</b><span><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M152.58,66.35a130.61,130.61,0,0,1,0,123.3,12,12,0,1,1-21.17-11.3,106.7,106.7,0,0,0,0-100.7,12,12,0,1,1,21.16-11.3ZM100.36,77.41a12,12,0,0,0-5,16.23,73,73,0,0,1,0,68.72,12,12,0,1,0,21.18,11.28,97,97,0,0,0,0-91.28A12,12,0,0,0,100.36,77.41ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"/></svg></span></div>
         <i class="wc-chip"></i>
-        <div class="wc-bal"><small>баланс</small><b class="num">2 350 ₽</b></div>
+        <div class="wc-bal"><small>баланс</small><b class="num">2 350 ₽</b></div>
         <div class="wc-bot"><span class="num">•• 7702</span><span>Альфа-Банк</span></div>
       </div>
       <div class="pill" aria-hidden="true"><span class="ok"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"/></svg></span><span><b>Оплачено при получении</b><small>курьеру не нужен терминал</small></span></div>
@@ -501,7 +546,7 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
       <div data-reveal>
         <h2 id="sm-h">Summary</h2>
         <dl class="facts">
-          <div><dt>Что это</dt><dd>Кошелёк Альфа-Банка под брендом Додо. Открывается за минуту прямо в чек-ауте приложения, без визита в банк.</dd></div>
+          <div><dt>Что такое xWallet?</dt><dd>Кошелёк Альфа-Банка под брендом Додо. Открывается за минуту прямо в чек-ауте приложения, без визита в банк.</dd></div>
           <div><dt>Гостю</dt><dd>x2 додокоинов, оплата в один тап, оплата доставки при получении и Альфа-Карта без лимитов.</dd></div>
           <div><dt>Додо</dt><dd>Чаще заказы, дешевле эквайринг, меньше терминалов у курьеров, новые гости из базы банка.</dd></div>
           <div><dt>Запуск</dt><dd>WebView и API банка в чек-ауте, пилот в нескольких пиццериях.</dd></div>
@@ -512,9 +557,9 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
         <ol>
           <li><a href="#essence"><span>Три способа платить</span><small>чек-аут, доставка, карта</small></a></li>
           <li><a href="#journey"><span>Путь гостя</span><small>4 сценария по шагам</small></a></li>
-          <li><a href="#plastic"><span>Пластиковая карта</span><small>лимиты и преимущества</small></a></li>
+          <li><a href="#plastic"><span>Снятие лимитов</span><small>Госуслуги или Альфа-Карта</small></a></li>
           <li><a href="#demo"><span>Живой прототип</span><small>закажите и оплатите сами</small></a></li>
-          <li><a href="#dodo"><span>Что получает Додо</span><small>выгоды для бизнеса</small></a></li>
+          <li><a href="#dodo"><span>Что получает Додо</span><small>выгоды и калькулятор экономии</small></a></li>
           <li><a href="#launch"><span>Как запускаем</span><small>4 шага до сети</small></a></li>
         </ol>
       </nav>
@@ -533,7 +578,7 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
         <div>
           <h3>Кошелёк рядом с СБП и SberPay</h3>
           <p>Гость выбирает Додо Wallet как привычный способ оплаты. Кошелёк открывается за минуту прямо в чек-ауте, без визита в банк.</p>
-          <div class="coins"><span class="dc">D</span><span>+90 додокоинов вместо <s>+45</s> за пиццу за 900 ₽</span></div>
+          <div class="coins"><span class="dc">D</span><span>+90 додокоинов вместо <s>+45</s> за пиццу за 900 ₽</span></div>
         </div>
         <div class="pay-row" aria-hidden="true">
           <span class="chipx sel"><i class="mk"></i><span>Додо Wallet<small>x2 додокоинов</small></span></span>
@@ -590,22 +635,33 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
 <section id="plastic" aria-labelledby="pl-h" style="padding-top:0">
   <div class="wrap plastic">
     <div class="cards-vis" data-reveal-group aria-hidden="true">
-      <div class="wcard orange c1"><div class="wc-top"><i class="mk"></i><b>додо wallet</b><span><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M152.58,66.35a130.61,130.61,0,0,1,0,123.3,12,12,0,1,1-21.17-11.3,106.7,106.7,0,0,0,0-100.7,12,12,0,1,1,21.16-11.3ZM100.36,77.41a12,12,0,0,0-5,16.23,73,73,0,0,1,0,68.72,12,12,0,1,0,21.18,11.28,97,97,0,0,0,0-91.28A12,12,0,0,0,100.36,77.41ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"/></svg></span></div><div class="wc-bal"><small>цифровой кошелёк</small><b class="num">2 350 ₽</b></div><div class="wc-bot"><span class="num">•• 7702</span><span>Альфа-Банк</span></div></div>
+      <div class="wcard orange c1"><div class="wc-top"><i class="mk"></i><b>додо wallet</b><span><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M152.58,66.35a130.61,130.61,0,0,1,0,123.3,12,12,0,1,1-21.17-11.3,106.7,106.7,0,0,0,0-100.7,12,12,0,1,1,21.16-11.3ZM100.36,77.41a12,12,0,0,0-5,16.23,73,73,0,0,1,0,68.72,12,12,0,1,0,21.18,11.28,97,97,0,0,0,0-91.28A12,12,0,0,0,100.36,77.41ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"/></svg></span></div><div class="wc-bal"><small>цифровой кошелёк</small><b class="num">2 350 ₽</b></div><div class="wc-bot"><span class="num">•• 7702</span><span>Альфа-Банк</span></div></div>
       <div class="wcard alfa c2"><div class="wc-top"><b>Альфа-Карта</b><span><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M152.58,66.35a130.61,130.61,0,0,1,0,123.3,12,12,0,1,1-21.17-11.3,106.7,106.7,0,0,0,0-100.7,12,12,0,1,1,21.16-11.3ZM100.36,77.41a12,12,0,0,0-5,16.23,73,73,0,0,1,0,68.72,12,12,0,1,0,21.18,11.28,97,97,0,0,0,0-91.28A12,12,0,0,0,100.36,77.41ZM236,128A108,108,0,1,1,128,20,108.12,108.12,0,0,1,236,128Zm-24,0a84,84,0,1,0-84,84A84.09,84.09,0,0,0,212,128Z"/></svg></span></div><i class="wc-chip"></i><div class="wc-bal"><small>Елизавета Орлова</small></div><div class="wc-bot"><span class="num">•• 7702</span><span>дебетовая</span></div></div>
     </div>
     <div data-reveal>
-      <h2 id="pl-h">Пластиковая карта снимает ограничения</h2>
-      <p class="lead">Цифровой кошелёк открывается за минуту, но работает с лимитами. Гость назначает встречу прямо в приложении Додо: представитель банка привозит карту и подтверждает данные по паспорту, после этого лимиты снимаются.</p>
+      <h2 id="pl-h">Два способа снять ограничения</h2>
+      <p class="lead">Цифровой кошелёк открывается за минуту, но работает с лимитами. Гость снимает их прямо в приложении Додо одним из двух способов.</p>
       <div class="lim">
-        <div class="before"><small>Без пластика, за раз</small><b class="num">15 000 ₽</b></div>
-        <div class="before"><small>Без пластика, в месяц</small><b class="num">40 000 ₽</b></div>
+        <div class="before"><small>Лимит кошелька, за раз</small><b class="num">15 000 ₽</b></div>
+        <div class="before"><small>Лимит кошелька, в месяц</small><b class="num">40 000 ₽</b></div>
       </div>
-      <ul class="perks">
-        <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,76H100V56a28,28,0,0,1,28-28c13.51,0,25.65,9.62,28.24,22.39a12,12,0,1,0,23.52-4.78C174.87,21.5,153.1,4,128,4A52.06,52.06,0,0,0,76,56V76H48A20,20,0,0,0,28,96V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V96A20,20,0,0,0,208,76Zm-4,128H52V100H204Z"/></svg><div><b>Без лимитов кошелька</b><span>Большие заказы и пополнения без ограничений</span></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208.49,64.47l-144,144a12,12,0,1,1-17-17l144-144a12,12,0,0,1,17,17ZM47.72,104.27A40,40,0,1,1,76,116,39.72,39.72,0,0,1,47.72,104.27ZM60,76a16,16,0,1,0,4.69-11.31A15.87,15.87,0,0,0,60,76ZM220,180a40,40,0,1,1-11.72-28.29A39.71,39.71,0,0,1,220,180Zm-24,0a15.87,15.87,0,0,0-4.69-11.32h0A16,16,0,1,0,196,180Z"/></svg><div><b>Кэшбэк на всё</b><span>Кэшбэк Альфа-Банка на покупки за пределами Додо</span></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,68H190.06A33.82,33.82,0,0,0,196,49.69,36.62,36.62,0,0,0,158.31,12,33.44,33.44,0,0,0,134,23.25a54.65,54.65,0,0,0-6,8.3,54.65,54.65,0,0,0-6-8.3A33.44,33.44,0,0,0,97.69,12,36.62,36.62,0,0,0,60,49.69,33.82,33.82,0,0,0,65.94,68H40A20,20,0,0,0,20,88v32a20,20,0,0,0,16,19.6V200a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V139.6A20,20,0,0,0,236,120V88A20,20,0,0,0,216,68Zm-4,48H140V92h72ZM152,39.17A9.59,9.59,0,0,1,159,36h.35A12.62,12.62,0,0,1,172,49,9.59,9.59,0,0,1,168.83,56c-6.9,6.12-18.25,9.26-27.63,10.76C142.7,57.42,145.84,46.07,152,39.17ZM87.7,39.7A12.8,12.8,0,0,1,96.61,36H97A9.59,9.59,0,0,1,104,39.17c6.12,6.9,9.26,18.24,10.75,27.61C105.45,65.27,94,62.13,87.17,56A9.59,9.59,0,0,1,84,49,12.72,12.72,0,0,1,87.7,39.7ZM44,92h72v24H44Zm16,48h56v56H60Zm80,56V140h56v56Z"/></svg><div><b>Велкам-бонус</b><span>1 000 додокоинов после подтверждения данных и покупок от 15 000 ₽</span></div></li>
-        <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M236,96a12,12,0,0,0-.44-3.3L221.2,42.51A20.08,20.08,0,0,0,202,28H54A20.08,20.08,0,0,0,34.8,42.51L20.46,92.7A12,12,0,0,0,20,96h0v16a43.94,43.94,0,0,0,16,33.92V216a12,12,0,0,0,12,12H208a12,12,0,0,0,12-12V145.92A43.94,43.94,0,0,0,236,112V96ZM57.05,52H199l9.14,32H47.91Zm91,56v4a20,20,0,0,1-40,0v-4ZM53,128.71A20,20,0,0,1,44,112v-4H84v4a20,20,0,0,1-20,20,19.76,19.76,0,0,1-9.07-2.2A11.54,11.54,0,0,0,53,128.71ZM196,204H60V155.81c1.32.12,2.65.19,4,.19a43.86,43.86,0,0,0,32-13.85,43.89,43.89,0,0,0,64,0A43.86,43.86,0,0,0,192,156c1.35,0,2.68-.07,4-.19Zm16-92a20,20,0,0,1-9,16.71,11.66,11.66,0,0,0-1.88,1.09A20,20,0,0,1,172,112v-4h40Z"/></svg><div><b>Платите везде</b><span>Карта работает в любых магазинах и снимает наличные</span></div></li>
-      </ul>
+      <div class="ways">
+        <article class="way">
+          <span class="gu"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M148,108a12,12,0,0,1,12-12h28a12,12,0,0,1,0,24H160A12,12,0,0,1,148,108Zm40,28H168a12,12,0,0,0,0,24h20a12,12,0,0,0,0-24Zm48-80V200a20,20,0,0,1-20,20H40a20,20,0,0,1-20-20V56A20,20,0,0,1,40,36H216A20,20,0,0,1,236,56Zm-24,4H44V196H212ZM58.28,159.37A43.82,43.82,0,0,1,71.53,142a36,36,0,1,1,56.94,0,43.84,43.84,0,0,1,13.26,17.37,12,12,0,0,1-22.15,9.26C116.48,161.19,108.42,156,100,156s-16.47,5.2-19.59,12.63a12,12,0,1,1-22.13-9.26ZM88,120a12,12,0,1,0,12-12A12,12,0,0,0,88,120Z"/></svg></span>
+          <b>Госуслуги, без пластика</b>
+          <p>Подтверждение личности онлайн за пару минут, без встречи. Лимиты снимаются, гость продолжает платить цифровым Додо Wallet.</p>
+        </article>
+        <article class="way plastic-way">
+          <span class="gu"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,44H32A20,20,0,0,0,12,64V192a20,20,0,0,0,20,20H224a20,20,0,0,0,20-20V64A20,20,0,0,0,224,44Zm-4,24V88H36V68ZM36,188V112H220v76Zm172-24a12,12,0,0,1-12,12H164a12,12,0,0,1,0-24h32A12,12,0,0,1,208,164Zm-68,0a12,12,0,0,1-12,12H116a12,12,0,0,1,0-24h12A12,12,0,0,1,140,164Z"/></svg></span>
+          <b>Пластиковая Альфа-Карта</b>
+          <p>Представитель банка привозит карту и сверяет паспорт в удобное время. Лимиты снимаются, и появляются преимущества карты:</p>
+          <ul>
+            <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208.49,64.47l-144,144a12,12,0,1,1-17-17l144-144a12,12,0,0,1,17,17ZM47.72,104.27A40,40,0,1,1,76,116,39.72,39.72,0,0,1,47.72,104.27ZM60,76a16,16,0,1,0,4.69-11.31A15.87,15.87,0,0,0,60,76ZM220,180a40,40,0,1,1-11.72-28.29A39.71,39.71,0,0,1,220,180Zm-24,0a15.87,15.87,0,0,0-4.69-11.32h0A16,16,0,1,0,196,180Z"/></svg>Кэшбэк Альфа-Банка на покупки за пределами Додо</li>
+            <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,68H190.06A33.82,33.82,0,0,0,196,49.69,36.62,36.62,0,0,0,158.31,12,33.44,33.44,0,0,0,134,23.25a54.65,54.65,0,0,0-6,8.3,54.65,54.65,0,0,0-6-8.3A33.44,33.44,0,0,0,97.69,12,36.62,36.62,0,0,0,60,49.69,33.82,33.82,0,0,0,65.94,68H40A20,20,0,0,0,20,88v32a20,20,0,0,0,16,19.6V200a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V139.6A20,20,0,0,0,236,120V88A20,20,0,0,0,216,68Zm-4,48H140V92h72ZM152,39.17A9.59,9.59,0,0,1,159,36h.35A12.62,12.62,0,0,1,172,49,9.59,9.59,0,0,1,168.83,56c-6.9,6.12-18.25,9.26-27.63,10.76C142.7,57.42,145.84,46.07,152,39.17ZM87.7,39.7A12.8,12.8,0,0,1,96.61,36H97A9.59,9.59,0,0,1,104,39.17c6.12,6.9,9.26,18.24,10.75,27.61C105.45,65.27,94,62.13,87.17,56A9.59,9.59,0,0,1,84,49,12.72,12.72,0,0,1,87.7,39.7ZM44,92h72v24H44Zm16,48h56v56H60Zm80,56V140h56v56Z"/></svg>Велкам-бонус: 1 000 додокоинов после подтверждения данных и покупок от 15 000 ₽</li>
+            <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M236,96a12,12,0,0,0-.44-3.3L221.2,42.51A20.08,20.08,0,0,0,202,28H54A20.08,20.08,0,0,0,34.8,42.51L20.46,92.7A12,12,0,0,0,20,96h0v16a43.94,43.94,0,0,0,16,33.92V216a12,12,0,0,0,12,12H208a12,12,0,0,0,12-12V145.92A43.94,43.94,0,0,0,236,112V96ZM57.05,52H199l9.14,32H47.91Zm91,56v4a20,20,0,0,1-40,0v-4ZM53,128.71A20,20,0,0,1,44,112v-4H84v4a20,20,0,0,1-20,20,19.76,19.76,0,0,1-9.07-2.2A11.54,11.54,0,0,0,53,128.71ZM196,204H60V155.81c1.32.12,2.65.19,4,.19a43.86,43.86,0,0,0,32-13.85,43.89,43.89,0,0,0,64,0A43.86,43.86,0,0,0,192,156c1.35,0,2.68-.07,4-.19Zm16-92a20,20,0,0,1-9,16.71,11.66,11.66,0,0,0-1.88,1.09A20,20,0,0,1,172,112v-4h40Z"/></svg>Оплата в любых магазинах и снятие наличных</li>
+          </ul>
+        </article>
+      </div>
       <p class="fine">Базовый вариант: стандартная Альфа-Карта. Кобрендовый дизайн с Додо можно обсудить отдельно. Размер кэшбэка и велкам-бонуса фиксируем на пилоте.</p>
     </div>
   </div>
@@ -644,6 +700,23 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
         <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M117.18,188.74a12,12,0,0,1,0,17l-5.12,5.12A58.26,58.26,0,0,1,70.6,228h0A58.62,58.62,0,0,1,29.14,127.92L63.89,93.17a58.64,58.64,0,0,1,98.56,28.11,12,12,0,1,1-23.37,5.44,34.65,34.65,0,0,0-58.22-16.58L46.11,144.89A34.62,34.62,0,0,0,70.57,204h0a34.41,34.41,0,0,0,24.49-10.14l5.11-5.12A12,12,0,0,1,117.18,188.74ZM226.83,45.17a58.65,58.65,0,0,0-82.93,0l-5.11,5.11a12,12,0,0,0,17,17l5.12-5.12a34.63,34.63,0,1,1,49,49L175.1,145.86A34.39,34.39,0,0,1,150.61,156h0a34.63,34.63,0,0,1-33.69-26.72,12,12,0,0,0-23.38,5.44A58.64,58.64,0,0,0,150.56,180h.05a58.28,58.28,0,0,0,41.47-17.17l34.75-34.75a58.62,58.62,0,0,0,0-82.91Z"/></svg><div><b>Данные о гостях</b><p>Связка «клиент банка и гость Додо» для персональных предложений и совместных акций.</p></div></li>
       </ul>
     </div>
+    <aside class="calc" data-reveal style="--i:1" aria-labelledby="calc-h">
+      <h3 id="calc-h">Экономия на эквайринге</h3>
+      <p class="sub">Подвигайте параметры. Значения по умолчанию условные: подставьте данные Додо.</p>
+      <div class="ctl"><label for="c-n">Пиццерии в России <output id="o-n" class="num"></output></label><input type="range" id="c-n" min="300" max="1500" step="10" value="900"></div>
+      <div class="ctl"><label for="c-rev">Выручка пиццерии в месяц <output id="o-rev" class="num"></output></label><input type="range" id="c-rev" min="2" max="15" step="0.1" value="6"></div>
+      <div class="ctl"><label for="c-share">Доля оплат кошельком <output id="o-share" class="num"></output></label><input type="range" id="c-share" min="5" max="70" step="1" value="25"></div>
+      <div class="ctl"><label for="c-cur">Текущая ставка эквайринга Додо <output id="o-cur" class="num"></output></label><input type="range" id="c-cur" min="1" max="2.8" step="0.05" value="1.8"></div>
+      <div class="ctl"><label for="c-rate">Ставка по кошельку, гипотеза <output id="o-rate" class="num"></output></label><input type="range" id="c-rate" min="0.1" max="1.8" step="0.05" value="1.2"></div>
+      <div class="res" aria-live="polite">
+        <div>Экономия Додо в год<b id="r-year"></b></div>
+        <div>В месяц<b id="r-month"></b></div>
+        <div class="now">Эквайринг сейчас, в год<b id="r-now"></b></div>
+        <div class="now">С кошельком, в год<b id="r-new"></b></div>
+      </div>
+      <p class="formula num" id="r-formula"></p>
+      <p class="cnote">Сейчас все оплаты идут по текущей ставке, с кошельком по новой ставке идёт только доля оплат кошельком. Ставку кошелька фиксируем на пилоте.</p>
+    </aside>
   </div>
 </section>
 
@@ -675,7 +748,7 @@ footer{padding:36px 0 52px;color:var(--ink-3);font-size:.84rem}
 (()=>{
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const rub=n=>Math.round(n).toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+const rub=n=>Math.round(n).toLocaleString('ru-RU').replace(/\s/g,'\u00a0')+'\u00a0₽';
 requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.add('ready')));
 { const fab=$('.toc-fab'); new IntersectionObserver(([e])=>{ fab.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top<0); }).observe($('#summary')); }
 const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{rootMargin:'0px 0px -12% 0px',threshold:.08});
@@ -700,19 +773,19 @@ const S={
     ${st.opened?`<div class="banner"><i class="mk"></i><div><b class="num">${rub(st.balance)}</b><small>Додо Wallet · x2 додокоинов</small></div><span class="go">Кошелёк</span></div>`
       :`<button class="banner" data-act="go" data-v="offer"><img src="${IMG.prize}" alt=""><div><b>Додо Wallet</b><small>x2 додокоинов за каждый заказ</small></div><span class="go">Подробнее</span></button>`}
     <div class="cats"><span class="on">Для вас</span><span>Пиццы</span><span>Комбо</span></div>
-    <div class="grid3">${MENU.map(m=>`<button class="item" data-act="item" data-v="${m.id}"><img src="${m.img}" alt=""><b>${m.name}</b><span class="num">${m.id==='cheesy'?'от ':''}${m.price} ₽</span></button>`).join('')}</div>
+    <div class="grid3">${MENU.map(m=>`<button class="item" data-act="item" data-v="${m.id}"><img src="${m.img}" alt=""><b>${m.name}</b><span class="num">${m.id==='cheesy'?'от ':''}${m.price} ₽</span></button>`).join('')}</div>
     <div class="spacer"></div><p class="small" style="text-align:center">Нажмите на товар</p>`,
   product:st=>{const m=item(st); return `<div class="view white" style="position:absolute;inset:0;padding:52px 14px 16px;display:flex;flex-direction:column">
     <button class="xbtn" data-act="back" aria-label="Назад" style="position:absolute;top:50px;left:14px;z-index:2;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.1)">${I.back}</button>
     <img class="p-img" src="${m.big}" alt=""><div class="p-name">${m.full}</div><div class="p-sub">${m.sub}</div>
     ${m.id!=='cake'?`<div class="seg2"><span>Тонкое</span><span class="on">Традиционное</span></div>`:''}
-    <div class="spacer"></div><button class="cta" data-act="go" data-v="cart">В корзину за <span class="num">${m.price} ₽</span></button></div>`},
+    <div class="spacer"></div><button class="cta" data-act="go" data-v="cart">В корзину за <span class="num">${m.price} ₽</span></button></div>`},
   cart:st=>{const m=item(st); return `${sheetTop(true)}
-    <div class="card line"><img src="${m.id==='halves'?IMG.small:m.img}" alt=""><div class="t"><b>${m.full}</b><span>${m.sub}</span></div><b class="num">${m.price} ₽</b></div>
+    <div class="card line"><img src="${m.id==='halves'?IMG.small:m.img}" alt=""><div class="t"><b>${m.full}</b><span>${m.sub}</span></div><b class="num">${m.price} ₽</b></div>
     <div class="h-sm">Добавить к заказу?</div>
-    <div class="grid3"><div class="item"><img src="${IMG.cola}" alt=""><b>Добрый Кола</b><span>155 ₽</span></div><div class="item"><img src="${IMG.cake}" alt=""><b>Чизкейк</b><span>189 ₽</span></div><div class="item"><img src="${IMG.cocoa}" alt=""><b>Какао</b><span>159 ₽</span></div></div>
-    <div class="card" style="margin-top:10px"><div class="r"><span>1 товар</span><b class="num">${m.price} ₽</b></div><div class="r"><span>Додокоины</span><span class="or num">+${coins(st,false)}</span></div><div class="r"><span>С Додо Wallet</span><span class="or num">+${coins(st,true)}</span></div></div>
-    <div class="spacer"></div><button class="cta" data-act="go" data-v="checkout">К оформлению за <span class="num">${m.price} ₽</span></button>`},
+    <div class="grid3"><div class="item"><img src="${IMG.cola}" alt=""><b>Добрый Кола</b><span>155 ₽</span></div><div class="item"><img src="${IMG.cake}" alt=""><b>Чизкейк</b><span>189 ₽</span></div><div class="item"><img src="${IMG.cocoa}" alt=""><b>Какао</b><span>159 ₽</span></div></div>
+    <div class="card" style="margin-top:10px"><div class="r"><span>1 товар</span><b class="num">${m.price} ₽</b></div><div class="r"><span>Додокоины</span><span class="or num">+${coins(st,false)}</span></div><div class="r"><span>С Додо Wallet</span><span class="or num">+${coins(st,true)}</span></div></div>
+    <div class="spacer"></div><button class="cta" data-act="go" data-v="checkout">К оформлению за <span class="num">${m.price} ₽</span></button>`},
   checkout:st=>{const m=item(st), del=st.type==='delivery';
     const pm=(k,inner)=>`<button class="pm ${st.pay===k?'sel':''}" data-act="pay-m" data-v="${k}">${inner}</button>`;
     return `${sheetTop(true)}<div class="h-sheet">${del?'Доставка':'В пиццерии'}</div>
@@ -749,15 +822,15 @@ const S={
     <div class="spacer"></div><button class="cta dark" data-act="go" data-v="topup">Пополнить и оплатить</button>`,
   topup:st=>`${sheetTop(true)}<div class="h-sheet">Пополните кошелёк</div>
     <div class="card"><div class="r"><span>Баланс</span><b class="num">${rub(st.balance)}</b></div></div>
-    <p class="small" style="margin:8px 2px 0">На сумму от ${rub(item(st).price)} до 15 000 ₽</p>
+    <p class="small" style="margin:8px 2px 0">На сумму от ${rub(item(st).price)} до 15 000 ₽</p>
     <div class="amts">${[item(st).price,1500,3000].map(a=>`<button class="${st.amt===a?'on':''} num" data-act="amt" data-v="${a}">${rub(a)}</button>`).join('')}</div>
     <div class="h-sm">Выберите банк</div>
     ${[['Т-Банк','#FFDD2D'],['ВТБ','#0A2896'],['Сбербанк','#21A038']].map(([n,c],i)=>`<button class="bank ${i===0?'on':''}"><i style="background:${c}"></i>${n}</button>`).join('')}
-    <div class="spacer"></div><p class="small" style="text-align:center;margin-bottom:8px">Комиссия 0 ₽. Гость не уходит с чек-аута.</p>
+    <div class="spacer"></div><p class="small" style="text-align:center;margin-bottom:8px">Комиссия 0 ₽. Гость не уходит с чек-аута.</p>
     <button class="cta dark" data-act="topup">${st.busy?`<span class="spin">${I.spin}</span> Пополняем`:(st.fromPl?'Пополнить':'Пополнить и оплатить')}</button>`,
   alfaCards:st=>`${sheetTop(true)}<div class="h-sheet">Выбор карты</div><p class="small">Привяжем к кошельку вашу Альфа-Карту или выпустим новую</p>
-    <button class="bank on" style="margin-top:10px"><i style="background:#EF3124"></i><span style="flex:1">Альфа-Карта •• 4567</span><span class="num">24 380 ₽</span></button>
-    <button class="bank"><i style="background:#111113"></i><span style="flex:1">Альфа-Карта •• 3456</span><span class="num">1 000 ₽</span></button>
+    <button class="bank on" style="margin-top:10px"><i style="background:#EF3124"></i><span style="flex:1">Альфа-Карта •• 4567</span><span class="num">24 380 ₽</span></button>
+    <button class="bank"><i style="background:#111113"></i><span style="flex:1">Альфа-Карта •• 3456</span><span class="num">1 000 ₽</span></button>
     <button class="bank"><i style="background:#FF6900"></i>Выпустить новую карту</button>
     <div class="spacer"></div><button class="cta dark">Продолжить</button>`,
   alfaHappy:st=>`${sheetTop(false)}<div class="happy">${walletCard(24380,'orange')}<h4>Кошелёк открыт</h4><p class="small" style="font-size:13px">Привязан к Альфа-Карте •• 4567. Не хватит денег: пополним между своими счетами.</p></div>
@@ -792,14 +865,18 @@ const S={
   plOffer:st=>`${sheetTop(true)}
     <div class="h-sheet" style="font-size:19px;line-height:1.15">Перейдите на новый уровень кошелька: покупки и переводы без лимитов</div>
     <div class="flatcard" style="padding:2px 50px 10px">${walletCard(st.balance,'orange')}</div>
-    <div class="limits" style="margin-top:0"><div>Лимит за раз<b class="num">15 000 ₽</b></div><div>Лимит в месяц<b class="num">40 000 ₽</b></div></div>
-    <div class="rep"><b>Получите карту через представителя банка</b>
-      <ul><li>Карту привезёт курьер в удобное время или можно забрать в отделении</li><li>Понадобится паспорт</li></ul>
+    <div class="limits" style="margin-top:0"><div>Лимит за раз<b class="num">15 000 ₽</b></div><div>Лимит в месяц<b class="num">40 000 ₽</b></div></div>
+    <button class="gos" data-act="go" data-v="gosDone">${I.id}<span><b>Через Госуслуги</b><small>онлайн, без пластика</small></span></button>
+    <div class="rep"><b>Или получите Альфа-Карту через представителя банка</b>
+      <ul><li>Карта с кэшбэком и велкам-бонусом</li><li>Для встречи понадобится паспорт</li></ul>
       <button class="cta dark" data-act="go" data-v="plDesign">Заказать карту</button></div>
     <div class="spacer"></div>`,
+  gosDone:st=>`${sheetTop(false)}<div class="happy">${walletCard(st.balance,'orange')}<h4>Лимиты сняты</h4><p class="small" style="font-size:13px">Данные подтверждены через Госуслуги. Кошелёк работает без лимитов, пластик не нужен.</p></div>
+    <div class="limits"><div>Лимит за раз<b class="num">15 000 ₽</b></div><div>Лимит в месяц<b class="num">40 000 ₽</b></div></div>
+    <div class="spacer"></div><button class="cta ghost" data-act="restart">В меню</button>`,
   plDesign:st=>`${sheetTop(true)}<div class="h-sheet" style="text-align:center;margin-bottom:4px">Подтвердите личные данные</div>
     <p class="small" style="text-align:center">Для этого назначьте встречу с сотрудником банка</p>
-    <div class="bonus"><b><span class="num">1 000</span> додокоинов</b>получите после подтверждения данных и покупки на сумму от 15 000 ₽</div>
+    <div class="bonus"><b><span class="num">1 000</span> додокоинов</b>получите после подтверждения данных и покупки на сумму от 15 000 ₽</div>
     <div class="h-sm" style="margin-top:10px">Адрес</div>
     <div class="field adr"><div>Москва, ул. Лесная, 12, кв. 48</div>${I.ok}</div>
     <div class="h-sm">Дата и время</div>
@@ -831,7 +908,7 @@ const FLOWS={
     {t:'Анкета за минуту', p:'Телефон приходит из профиля Додо и не редактируется. Гость подтверждает гражданство, ФИО и дату рождения.', g:'Без визита в банк', d:'Данные партнёра переиспользуются', s:{screen:'anketa'}},
     {t:'Код из СМС', p:'Подтверждение номера внутри WebView банка. Гость остаётся в приложении Додо.', g:'Вход за секунды', d:'Гость не уходит из приложения', s:{screen:'sms',code:4}},
     {t:'Кошелёк открыт', p:'Моментально выпускаем бесплатную карту и привязываем её к способу оплаты в Додо.', g:'Платить можно сразу', d:'Кошелёк закреплён в чек-ауте', s:{screen:'happy',opened:true,balance:0}},
-    {t:'Пополнить и оплатить', p:'Пополнение с карты любого банка на сумму заказа или больше. Комиссия 0 ₽, до 15 000 ₽ за раз.', g:'Одно действие вместо двух', d:'Деньги гостя приходят заранее', s:{screen:'topup',opened:true,balance:0,amt:900}},
+    {t:'Пополнить и оплатить', p:'Пополнение с карты любого банка на сумму заказа или больше. Комиссия 0 ₽, до 15 000 ₽ за раз.', g:'Одно действие вместо двух', d:'Деньги гостя приходят заранее', s:{screen:'topup',opened:true,balance:0,amt:900}},
     {t:'Заказ принят', p:'Заказ оплачен кошельком, начислены двойные додокоины.', g:'+90 додокоинов вместо +45', d:'Оплата в контуре Альфа-Банка', s:{screen:'accepted',opened:false,balance:0,paidBy:'wallet'}}
   ],
   alfa:[
@@ -843,13 +920,13 @@ const FLOWS={
   ],
   delivery:[
     {t:'Оплата при получении', p:'Гость оформляет доставку и выбирает Додо Wallet. Приложение сразу говорит: деньги спишутся, когда заказ будет у вас.', g:'Платит за полученный заказ', d:'Меньше отказов в доставке', s:{screen:'checkout',type:'delivery',pay:'wallet'}},
-    {t:'Сумма в резерве', p:'Заказ оформлен, 900 ₽ зарезервированы в кошельке. Для Додо это гарантия оплаты.', g:'Деньги не списаны', d:'Гарантия оплаты заказа', s:{screen:'reserved',type:'delivery'}},
+    {t:'Сумма в резерве', p:'Заказ оформлен, 900 ₽ зарезервированы в кошельке. Для Додо это гарантия оплаты.', g:'Деньги не списаны', d:'Гарантия оплаты заказа', s:{screen:'reserved',type:'delivery'}},
     {t:'Курьер в пути', p:'Гость видит время, курьера и сумму, которая спишется при получении. Курьеру не нужен терминал.', g:'Прозрачный статус', d:'Меньше терминалов и наличных', s:{screen:'courier',type:'delivery'}},
     {t:'Получил, значит оплатил', p:'Гость нажимает «Я получил заказ», сумма списывается из резерва. Он показывает курьеру номер заказа.', g:'Одна кнопка вместо терминала', d:'Списание строго по факту', s:{screen:'delivered',type:'delivery',balance:1450}}
   ],
   plastic:[
-    {t:'Предложение карты', p:'После первых заказов гость видит в кошельке предложение перейти на новый уровень: покупки и переводы без лимитов 15 000 ₽ за раз и 40 000 ₽ в месяц.', g:'Причина заказать карту', d:'Гость глубже в экосистеме', s:{screen:'plOffer'}},
-    {t:'Назначить встречу', p:'Для снятия лимитов банк подтверждает личные данные. Гость выбирает адрес, дату и время, представитель банка привезёт карту. За подтверждение и покупки от 15 000 ₽ начисляется 1 000 додокоинов.', g:'Встреча в удобное время', d:'Бонус в валюте Додо', s:{screen:'plDesign'}},
+    {t:'Предложение карты', p:'После первых заказов гость видит в кошельке предложение перейти на новый уровень: покупки и переводы без лимитов 15 000 ₽ за раз и 40 000 ₽ в месяц. Снять лимиты можно двумя способами: онлайн через Госуслуги без пластика или с Альфа-Картой через встречу с представителем банка.', g:'Причина заказать карту', d:'Гость глубже в экосистеме', s:{screen:'plOffer'}},
+    {t:'Назначить встречу', p:'Для снятия лимитов банк подтверждает личные данные. Гость выбирает адрес, дату и время, представитель банка привезёт карту. За подтверждение и покупки от 15 000 ₽ начисляется 1 000 додокоинов.', g:'Встреча в удобное время', d:'Бонус в валюте Додо', s:{screen:'plDesign'}},
     {t:'Встреча назначена', p:'Кошельком можно пользоваться сразу. Экран напоминает про паспорт и пин-код и предлагает пополнить кошелёк.', g:'Пользуется картой уже сейчас', d:'Пополнение сразу после оформления', s:{screen:'plDone'}}
   ]
 };
@@ -917,18 +994,36 @@ pHost.addEventListener('click',async e=>{
       await wait(380); log('Номер подтверждён'); log('Кошелёк открыт','бесплатная карта •• 7702'); log('Реквизиты переданы в Додо','кошелёк стал способом оплаты');
       st.opened=true; st.balance=0; st.pay='wallet'; st.amt=item(st).price; goTo('happy'); return; }
     if(v==='courier') log('Курьер забрал заказ','сумма остаётся в резерве');
-    if(v==='plOffer') log('Показан оффер пластика','в профиле гостя');
+    if(v==='plOffer') log('Показан оффер снятия лимитов','в кошельке гостя');
+    if(v==='gosDone'){ log('Идентификация через Госуслуги','личность подтверждена'); log('Лимиты кошелька сняты','без выпуска пластика'); }
     if(v==='plDone'){ log('Встреча назначена', ['29.09','30.09','01.10'][st.day]+', '+SLOTS[st.slot]); log('Заявка на снятие лимитов','после подтверждения паспорта'); }
     if(v==='topup'&&st.screen==='plDone'){ st.amt=1500; st.fromPl=true; }
     goTo(v); return;
   }
-  if(a==='topup'){ st.busy=true; render(0); log('Пополнение по СБП', rub(st.amt)+' из Т-Банка, комиссия 0 ₽'); await wait(1000); st.balance+=st.amt; st.busy=false; log('Пополнение зачислено', 'баланс '+rub(st.balance)); if(st.fromPl){ st.fromPl=false; hist=[]; st.screen='menu'; render(1); return; } hist=['menu']; st.screen='checkout'; render(1); await wait(500); payNow(); return; }
+  if(a==='topup'){ st.busy=true; render(0); log('Пополнение по СБП', rub(st.amt)+' из Т-Банка, комиссия 0 ₽'); await wait(1000); st.balance+=st.amt; st.busy=false; log('Пополнение зачислено', 'баланс '+rub(st.balance)); if(st.fromPl){ st.fromPl=false; hist=[]; st.screen='menu'; render(1); return; } hist=['menu']; st.screen='checkout'; render(1); await wait(500); payNow(); return; }
   if(a==='pay'){ const m=item(st); if(st.pay==='wallet'&&st.balance<m.price){ log('Не хватает на балансе','предложено пополнение'); goTo('topup'); return; } payNow(); return; }
   if(a==='receive'){ st.busy=true; render(0); await wait(1000); st.busy=false; st.balance-=item(st).price; log('Гость подтвердил получение','курьер без терминала'); log('Списание из резерва', rub(item(st).price)+' · +'+coins(st,true)+' додокоинов'); goTo('delivered'); return; }
 });
 $$('.seg button').forEach(b=>b.addEventListener('click',()=>{ $$('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b)); reset(b.dataset.scn); }));
 $('#reset').addEventListener('click',()=>reset($('.seg [aria-pressed="true"]').dataset.scn));
 reset('returning');
+
+/* ============ calculator ============ */
+{ const $c=id=>document.getElementById(id);
+  const mln=n=>{ const v=n/1e6, d=v>=1000?0:v>=10?1:2; return v.toLocaleString('ru-RU',{minimumFractionDigits:d,maximumFractionDigits:d}).replace(/\s/g,'\u00a0')+' млн ₽'; };
+  const pct=n=>n.toLocaleString('ru-RU',{maximumFractionDigits:2})+'%';
+  function calc(){
+    const cur=+$c('c-cur').value, rateEl=$c('c-rate');
+    rateEl.max=cur; if(+rateEl.value>cur) rateEl.value=cur;
+    const n=+$c('c-n').value, rev=+$c('c-rev').value*1e6, share=+$c('c-share').value/100, rate=+rateEl.value;
+    $c('o-n').textContent=n.toLocaleString('ru-RU').replace(/\u00a0/g,' '); $c('o-rev').textContent=mln(rev); $c('o-share').textContent=Math.round(share*100)+'%'; $c('o-cur').textContent=pct(cur); $c('o-rate').textContent=pct(rate);
+    const turn=n*rev*12, now=turn*cur/100, next=turn*(1-share)*cur/100+turn*share*rate/100, save=now-next;
+    $c('r-year').textContent=mln(save); $c('r-month').textContent=mln(save/12); $c('r-now').textContent=mln(now); $c('r-new').textContent=mln(next);
+    $c('r-formula').textContent=`${mln(turn)} оборота в год × ${Math.round(share*100)}% кошельком × (${pct(cur)} − ${pct(rate)}) = ${mln(save)}`;
+    document.querySelectorAll('.calc input[type=range]').forEach(r=>r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%'));
+  }
+  document.querySelectorAll('.calc input').forEach(r=>r.addEventListener('input',calc)); calc();
+}
 })();
 </script>
 </body>
